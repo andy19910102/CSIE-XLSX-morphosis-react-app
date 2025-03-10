@@ -192,7 +192,7 @@ export default function Home() {
     // Generate XLSX file
     const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
     const data = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-    saveAs(data, 'processed_accounts.xlsx');
+    saveAs(data, '會計科目分類帳.xlsx');
     setShowModal(false);
   };
 
